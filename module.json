@@ -2,7 +2,7 @@
   "id": "ethereal-tokens",
   "title": "Ethereal Tokens",
   "description": "Allow specific tokens to ignore walls when moving",
-  "version": "1.0.0",
+  "version": "",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -28,5 +28,11 @@
         "type": "module"
       }
     ]
-  }
+  },
+  "url": "https://github.com/Aioros/ethereal-tokens",
+  "download": "",
+  "manifest": "https://github.com/Aioros/ethereal-tokens/releases/latest/download/module.json",
+  "license": "https://www.gnu.org/licenses/agpl-3.0.en.html",
+  "readme": "README.md",
+  "bugs": "https://github.com/Aioros/ethereal-tokens/issues"
 }
