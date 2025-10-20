@@ -15,8 +15,9 @@ Hooks.on("init", () => {
     );
 });
 
-Hooks.on("renderTokenConfig", (app, html, context, options) => {
-    const value = app.document.getFlag(MODULE_ID, ignoreWallsFlagKey) ?? false;
+function addOptions(app, html, context, options) {
+    const document = app.isPrototype ? app.actor.prototypeToken : app.document;
+    const value = document.getFlag(MODULE_ID, ignoreWallsFlagKey) ?? false;
     const name = `flags.${MODULE_ID}.${ignoreWallsFlagKey}`;
 
     const input = foundry.applications.fields.createCheckboxInput({ name, value });
@@ -26,8 +27,10 @@ Hooks.on("renderTokenConfig", (app, html, context, options) => {
         hint: "ETHEREAL_TOKENS.Options.Token.ignoreWallsHint",
         localize: true
     });
-
     const identityTab = html.querySelector(`.tab[data-group="sheet"][data-tab="identity"]`);
     identityTab.append(group);
     app.setPosition();
-});
+}
+
+Hooks.on("renderTokenConfig", addOptions);
+Hooks.on("renderPrototypeTokenConfig", addOptions);
