@@ -6,11 +6,11 @@
 A module for Foundry VTT to allow specific tokens to ignore walls when moving.
 
 ## How to use
-Once installed, you'll see a new option in the token configuration window:
+Once installed, you'll see a new option at the bottom of the token configuration window:
 
-![image](https://user-images.githubusercontent.com/5131886/128588603-cbbc558c-8ae5-4005-a56f-0c28afb6fcfd.png)
+![image](https://raw.githubusercontent.com/Aioros/ethereal-tokens/master/images/tokenconfig.png)
 
-Any token with th
+Any token with this checkbox enabled will be able to move through walls as if the "Unconstrained Movement" control button was active.
 
 ## License
 This work is licensed under Foundry Virtual Tabletop [EULA - Limited License Agreement for module development v 0.1.6](http://foundryvtt.com/pages/license.html).  
