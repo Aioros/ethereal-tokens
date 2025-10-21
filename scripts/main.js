@@ -34,7 +34,7 @@ function addOptions(app, html, context, options) {
     const ignoreWallsFlagValue = document.getFlag(MODULE_ID, ignoreWallsFlagKey) ?? false;
     const name = `flags.${MODULE_ID}.${ignoreWallsFlagKey}`;
 
-    const input = foundry.applications.fields.createCheckboxInput({ name, ignoreWallsFlagValue });
+    const input = foundry.applications.fields.createCheckboxInput({ name, value: ignoreWallsFlagValue });
     const group = foundry.applications.fields.createFormGroup({
         input,
         label: "ETHEREAL_TOKENS.Options.Token.ignoreWalls",
